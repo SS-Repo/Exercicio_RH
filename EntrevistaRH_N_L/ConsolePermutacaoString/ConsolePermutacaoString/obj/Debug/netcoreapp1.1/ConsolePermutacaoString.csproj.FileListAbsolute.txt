@@ -1,0 +1,9 @@
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\bin\Debug\netcoreapp1.1\ConsolePermutacaoString.deps.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\bin\Debug\netcoreapp1.1\ConsolePermutacaoString.runtimeconfig.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\bin\Debug\netcoreapp1.1\ConsolePermutacaoString.runtimeconfig.dev.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\bin\Debug\netcoreapp1.1\ConsolePermutacaoString.dll
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\bin\Debug\netcoreapp1.1\ConsolePermutacaoString.pdb
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\obj\Debug\netcoreapp1.1\ConsolePermutacaoString.csprojResolveAssemblyReference.cache
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\obj\Debug\netcoreapp1.1\ConsolePermutacaoString.AssemblyInfo.cs
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\obj\Debug\netcoreapp1.1\ConsolePermutacaoString.dll
+c:\users\sergio\documents\visual studio 2017\Projects\ConsolePermutacaoString\ConsolePermutacaoString\obj\Debug\netcoreapp1.1\ConsolePermutacaoString.pdb

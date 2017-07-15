@@ -1,0 +1,34 @@
+
+Exercicios Exemplos Entrevista RH
+
+1 - Descreva com suas palavras um algoritmo que determine se duas strings são permutação uma da outra.
+As strings, que nunca serão vazias, contêm palavras da língua inglesa em caixa baixa e sem pontuação. 
+Seu algoritmo deve ter complexidade O(n) e usar o mínimo de memória possível.
+
+
+2 - Dado um arquivo texto com n > 0 linhas, 
+reordene as linhas de forma que as linhas cujo número é um número de Fibonacci apareçam primeiro.
+Por exemplo, em um arquivo de 10 linhas, 
+a saída deve conter as linhas do arquivo na seguinte ordem: 1, 2, 3, 5, 8, 4, 6, 7, 9, 10
+
+
+Para as duas questões a seguir, considere o seguinte banco de dados:
+
+
+TIME (id, nome, estado)
+
+CAMPEONATO (id, nome, ano_realizacao)
+
+RESULTADO (id_time, id_campeonato, pontos)
+
+
+3 - Faça uma query SQL que retorne a lista dos times que se classificaram para a Libertadores nos últimos 5 anos.
+Os 6 primeiros times do campeonato se classificam para a Libertadores. Os resultados devem aparecer em ordem decrescente,
+ordenados por ano de realização do torneio e classificação final do time.
+
+4 - Faça uma query SQL que retorne o número de equipes rebaixadas, 
+por estado, nos últimos 30 anos. 
+Os 4 últimos colocados do campeonato são rebaixados todo ano.
+
+Boa sorte!
+

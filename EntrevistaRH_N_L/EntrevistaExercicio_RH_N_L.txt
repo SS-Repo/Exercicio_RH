@@ -1,0 +1,210 @@
+﻿ 
+
+Entrevista 1 fase RH N_L
+
+Sergio Silveira
+
+1)Descreva com suas palavras um algoritmo que determine se duas strings são permutação uma da outra.
+ As strings, que nunca serão vazias, contêm palavras da língua inglesa em caixa baixa e sem pontuação. 
+ Seu algoritmo deve ter complexidade O(n) e usar o mínimo de memória possível.
+
+ //Resposta - 1
+ 
+using System;
+
+namespace ConsolePermutacaoString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //string 1
+            string word_1;
+            //string 2
+            string word_2;
+
+            //Imprimi o titulo na tela 
+            Console.WriteLine("Algoritmo Permutacao de String");
+
+            //Imprimi a frase na tela 
+            Console.WriteLine("Escreva uma palavra:");
+            //Recebe os dados do teclado e armazena na variavel
+            word_1 = Console.ReadLine();
+           
+            //Imprimir a frase na tela 
+            Console.WriteLine("Escreva outra palavra:");
+            //Recebe os dados do teclado e armazena na variavel
+            word_2 = Console.ReadLine();
+
+            //isPermutation => metodo que determina se duas strings são permutação uma da outra 
+            //if => se a resposta for true entao,imprime a mensagem (E permutacao)
+            if (isPermutation(word_1, word_2))
+            {
+                Console.WriteLine("E permutacao");
+            }
+            //else => se false entao,imprime a mensagem(nao e permutacao)
+            else {
+                Console.WriteLine("Nao e permutacao");
+            }
+            //Espera uma ação no teclado para finalizar o algoritmo
+            Console.ReadKey();
+        }
+
+        //metodo que verifica permutação entre strings
+        //Custo do algoritmo 
+        //tempo O(m+n)
+        //espaço O(1)
+        private static bool isPermutation(string word_1, string word_2)
+        {
+            //variavel inteira inicializada com valor 0
+            int result = 0;//O(1)
+            //percorre enquanto i que tem valor 0,for menor que o tamanho da string
+            for (int i = 0; i < word_1.Length; i++)//O(n)
+            {
+                //^ => operador de (ou)chor exclusivo
+                //funciona da seguinte maneira:dados 2 bits de entrada
+                //se os 2 bits forem iguais 11 ou 00,o resultado da operação e sempre 0
+                //se os dois bits de entrada forem diferentes o resultado sempre sera 1
+                //result ira acumular os dados em forma de bits da string word_1
+                result = result ^ word_1[i]; 
+            }
+            //percorre enquanto i que tem valor 0,for menor que o tamanho da string
+            for (int i = 0; i < word_2.Length; i++)//O(m)
+            {
+                //result ira acumular os dados em forma de bits da string word_2
+                //quando result comparar dados iguais o resultado sera 0
+                result = result ^ word_2[i];
+            }
+            //Assim quando o resultado de result for igual a 0
+            //o retorno do metodo sera positivo(true),ja que e um metodo boolean,
+            //e quando o resultado for 1 o retorno sera falso(false)
+            return (result == 0);
+        }
+    }
+}
+
+2)Dado um arquivo texto com n > 0 linhas, 
+reordene as linhas de forma que as linhas cujo número é um número de Fibonacci apareçam primeiro.
+Por exemplo, em um arquivo de 10 linhas, 
+a saída deve conter as linhas do arquivo na seguinte ordem: 1, 2, 3, 5, 8, 4, 6, 7, 9, 10
+
+  //Resposta - 2
+
+using System;
+
+namespace ConsoleReordenacaoLinhas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero_linhas;
+            int num_1 = 0;
+            int num_2 = 1;
+            int aux;
+
+            Console.WriteLine("**Reordenacao de Linhas**");
+            Console.WriteLine(" ");
+            Console.WriteLine("Digite o numero de linhas do arquivo:");
+            numero_linhas = Convert.ToInt32(Console.ReadLine());
+
+            int[] array_1 = new int[numero_linhas];
+            for (int i = 0; i < numero_linhas; i++)
+            {
+                aux = num_1 + num_2;
+                num_1 = num_2;
+                num_2 = aux;
+
+                if (num_2 < numero_linhas)
+                {
+                    array_1[i] = num_2;
+                }
+            }
+
+            int[] array_2 = new int[numero_linhas + 1];
+            for (int i = 1; i < numero_linhas + 1; i++)
+            {
+                array_2[i] = i;
+            }
+
+            for (int i = 0; i < numero_linhas; i++)
+            {
+                for (int j = 0; j < array_2.Length; j++)
+                {
+                    if (array_1[i] == array_2[j])
+                    {
+                        array_2[j] = 0;
+                    }
+                }
+            }
+
+            Console.WriteLine(" ");
+            Array.Sort(array_2);
+            for (int i = 0; i < numero_linhas; i++)
+            {
+                if (array_2[i + 1] != 0)
+                {
+                    array_1[i] = array_2[i + 1];
+                }
+                Console.WriteLine("indice" + "[" + i + "]" + " = " + array_1[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+Para as duas questões a seguir, considere o seguinte banco de dados:
+
+
+TIME (id, nome, estado)
+
+CAMPEONATO (id, nome, ano_realizacao)
+
+RESULTADO (id_time, id_campeonato, pontos)
+     
+3)Faça uma query SQL que retorne a lista dos times que se classificaram para a Libertadores 
+ nos últimos 5 anos. 
+ Os 6 primeiros times do campeonato se classificam para a Libertadores. 
+ Os resultados devem aparecer em ordem decrescente,
+ ordenados por ano de realização do torneio e classificação final do time.
+
+//Resposta - 3
+
+SELECT t.nome, 
+       c.nome, 
+       c.ano_realizacao 
+FROM   resultado r 
+       INNER JOIN time t 
+               ON t.id = r.id_time 
+       INNER JOIN campeonato c 
+               ON c.id = r.id_campeonato 
+WHERE  c.ano_realizacao BETWEEN '2012/01/01' AND '2017/01/01' 
+       AND c.nome = 'Libertadores' 
+ORDER  BY c.ano_realizacao DESC, 
+          r.pontos DESC 
+LIMIT  6; 
+
+
+4)Faça uma query SQL que retorne o número de equipes rebaixadas,
+por estado, nos últimos 30 anos. 
+Os 4 últimos colocados do campeonato são rebaixados todo ano.
+
+//Resposta - 4
+
+ SELECT Resultado.estado, 
+       Count(Resultado.estado), 
+       Resultado.ano_realizacao AS Total 
+FROM   (SELECT t.estado, 
+               c.ano_realizacao, 
+               r.pontos 
+        FROM   resultado r 
+               INNER JOIN time t 
+                       ON t.id = r.id_time 
+               INNER JOIN campeonato c 
+                       ON c.id = r.id_campeonato)AS Resultado 
+WHERE  Resultado.ano_realizacao BETWEEN '1987/01/01' AND '2017/01/01' 
+GROUP  BY Resultado.ano_realizacao, 
+          Resultado.estado, 
+          Resultado.ano_realizacao 
+ORDER  BY total 
+LIMIT  4; 

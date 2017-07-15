@@ -1,0 +1,9 @@
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\bin\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.deps.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\bin\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.runtimeconfig.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\bin\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.runtimeconfig.dev.json
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\bin\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.dll
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\bin\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.pdb
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\obj\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.csprojResolveAssemblyReference.cache
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\obj\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.AssemblyInfo.cs
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\obj\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.dll
+c:\users\sergio\documents\visual studio 2017\Projects\ConsoleReordenacaoLinhas\ConsoleReordenacaoLinhas\obj\Debug\netcoreapp1.1\ConsoleReordenacaoLinhas.pdb
